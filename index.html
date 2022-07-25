@@ -8,14 +8,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <header class="header">
             <div class="header__in center_block">
+                <div class="site-panel-wrap">
+                    <div class="burger-wrap">
+                        <div class="burger-btn"></div>
+                        <div class="burger-body">
+                            <div class="burger__top">
+                                <div class="burger-close-btn"></div>
+                                <a href="#" class="header__logo"><img src="img/logo.svg" alt=""></a>
+                                <a href="#" class="header__icon"></a>
+                            </div>
+                            <div class="burger_appended">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <a href="#" class="header__logo"><img src="img/logo.svg" alt=""></a>
                 <nav class="header__menu">
                     <ul>
@@ -24,22 +44,278 @@
                         <li><a href="#">Cashback</a></li>
                     </ul>
                 </nav>
-                <div class="select_price">
-                    <select name="" id="">
-                        <option value="eupope, €">eupope, €</option>
-                        <option value="dollar, $">dollar, $</option>
-                    </select>
+                <div class="header__select">
+                    <div class="select_price">
+                        <select name="" id="">
+                            <option value="eupope, €">eupope, €</option>
+                            <option value="dollar, $">dollar, $</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="header__buttons">
-                    <div class="header__icon"></div>
+                    <a href="#" class="header__icon"></a>
                     <div class="header__body">
                         <a href="#" target="_blank" class="header__button">Sign in</a>
-                        <a href="#" target="_blank" class="header__button">sign up</a>
+                        <a href="#" target="_blank" class="header__button btn_sign">sign up</a>
                     </div>
                 </div>
             </div>
         </header>
-        <main class="content"></main>
+        <main class="content">
+            <div class="block_choose center_block">
+                <div class="block_choose__title">Why Choose Us?</div>
+                <div class="block_choose__blocks">
+                    <div class="block_choose__block">
+                        <div class="block_choose__img"><img src="img/c1.svg" alt="PROVEN RESULTS"></div>
+                        <div class="block_choose__info">
+                            <div class="block_choose__tit">PROVEN RESULTS</div>
+                            <div class="block_choose__txt">Over 150k successfully completed orders</div>
+                        </div>
+                    </div>
+                    <div class="block_choose__block">
+                        <div class="block_choose__img"><img src="img/c2.svg" alt="FRIENDLY AND HELPFUL SUPPORT"></div>
+                        <div class="block_choose__info">
+                            <div class="block_choose__tit">FRIENDLY AND HELPFUL SUPPORT</div>
+                            <div class="block_choose__txt">Our support is ready to help you 24/7</div>
+                        </div>
+                    </div>
+                    <div class="block_choose__block">
+                        <div class="block_choose__img"><img src="img/c3.svg" alt="100% SAFE"></div>
+                        <div class="block_choose__info">
+                            <div class="block_choose__tit">100% SAFE</div>
+                            <div class="block_choose__txt">We only use safe and time-proven methods</div>
+                        </div>
+                    </div>
+                    <div class="block_choose__block">
+                        <div class="block_choose__img"><img src="img/c4.svg" alt="PLAY WITH THE PROS"></div>
+                        <div class="block_choose__info">
+                            <div class="block_choose__tit">PLAY WITH THE PROS</div>
+                            <div class="block_choose__txt">Our Team consists of highly vetted game SPECIFIC EXPERTS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about_block">
+                <div class="about_block__in center_block">
+                    <div class="about_block__title">About Us</div>
+                    <div class="about_block__blocks">
+                        <div class="about_block__l-side">If you want to use a MMO-boosting service, it is very important to choose a trustworthy and reliable company. There are many boosting companies around, but not all of them are worth your time. Some might even be unsafe to use, because of their security policy or players that are not as professional as they should be. And that is where SkyGold stands above almost any other boosting services' providers. We are one of the most trusted boosting companies in the market with over 10 years of experience in the market and thousands of positive client reviews.</div>
+                        <div class="about_block__r-side">
+                            <ul>
+                                <li>We work fast</li>
+                                <li>We work personally with you</li>
+                                <li>We guarantee a low price</li>
+                                <li>Complete Safety</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="how_block">
+                <div class="how_block__in center_block">
+                    <div class="how_block__title">How it Works</div>
+                    <div class="how_block__blocks">
+                        <div class="how_block__block">
+                            <div class="how_block__numb">1</div>
+                            <div class="how_block__text">Choose a service and discuss your order details</div>
+                        </div>
+                        <div class="how_block__block">
+                            <div class="how_block__numb">2</div>
+                            <div class="how_block__text">You can see the order status in real time</div>
+                        </div>
+                        <div class="how_block__block">
+                            <div class="how_block__numb">3</div>
+                            <div class="how_block__text">We immediately appoint the best PRO player</div>
+                        </div>
+                        <div class="how_block__block">
+                            <div class="how_block__numb">4</div>
+                            <div class="how_block__text">Your order completed</div>
+                        </div>
+                    </div>
+                    <div class="how_block__tit">We support all methods of payment</div>
+                    <div class="how_block__subtit">Safe and convenient system of payment</div>
+                    <div class="how_block__pays">
+                        <div class="how_block__pay"><img src="img/s1.svg" alt=""></div>
+                        <div class="how_block__pay"><img src="img/s2.svg" alt=""></div>
+                        <div class="how_block__pay"><img src="img/s3.svg" alt=""></div>
+                        <div class="how_block__pay"><img src="img/s4.svg" alt=""></div>
+                        <div class="how_block__pay"><img src="img/s5.svg" alt=""></div>
+                        <div class="how_block__pay"><img src="img/s6.svg" alt=""></div>
+                        <div class="how_block__pay"><img src="img/s7.svg" alt=""></div>
+                        <div class="how_block__pay"><img src="img/s8.svg" alt=""></div>
+                        <div class="how_block__pay"><img src="img/s9.svg" alt=""></div>
+                        <div class="how_block__pay"><img src="img/s10.svg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq_block center_block">
+                <div class="faq_block__title">FAQ</div>
+                <div class="faq_block__blocks">
+                    <div class="faq_block__block isActive">
+                        <div class="faq_block__tit">After the warranty period expires?</div>
+                        <div class="faq_block__txt">After the warranty period (10 days) expires, money for the completed order is transferred from your hold balance to the main one. You can withdraw funds from the main account: use the Withdrawal form, in the Dashboard or Balance section</div>
+                    </div>
+                    <div class="faq_block__block isActive">
+                        <div class="faq_block__tit">After the warranty period expires?</div>
+                        <div class="faq_block__txt">After the warranty period (10 days) expires, money for the completed order is transferred from your hold balance to the main one. You can withdraw funds from the main account: use the Withdrawal form, in the Dashboard or Balance section</div>
+                    </div>
+                    <div class="faq_block__block isActive">
+                        <div class="faq_block__tit">After the warranty period expires?</div>
+                        <div class="faq_block__txt">After the warranty period (10 days) expires, money for the completed order is transferred from your hold balance to the main one. You can withdraw funds from the main account: use the Withdrawal form, in the Dashboard or Balance section</div>
+                    </div>
+                    <div class="faq_block__block isActive">
+                        <div class="faq_block__tit">After the warranty period expires?</div>
+                        <div class="faq_block__txt">After the warranty period (10 days) expires, money for the completed order is transferred from your hold balance to the main one. You can withdraw funds from the main account: use the Withdrawal form, in the Dashboard or Balance section</div>
+                    </div>
+                </div>
+            </div>
+            <div class="rev_block center_block">
+                <div class="rev_block__h1">SkyGold reviews</div>
+                <div class="rev_block__info">
+                    <div class="rev_block__l-side"><img src="img/logo2.svg" alt=""></div>
+                    <div class="rev_block__r-side">
+                        <div class="rev_block__tit">Excellent 4.9 out of 5</div>
+                        <div class="rev_block__txt">Based on thousands of reviews</div>
+                    </div>
+                </div>
+                <div class="rev_block__subtitle">Professional D2 boosting services. Get anything a true Guardian needs. Buy pinnacle weapons, godrolls, PvP & PvE carry, ultimate raid armor sets to dominate your opponents</div>
+                <div class="rev_block__sl sl_rev">
+                    <div class="rev_block__block">
+                        <div class="rev_block__title">N'Zoth, the Corruptor Heroic kill</div>
+                        <div class="rev_block__inf">
+                            <div class="rev_block__stars">
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                            </div>
+                            <div class="rev_block__name">Jimmy</div>
+                        </div>
+                        <div class="rev_block__text">Fast delivery! Nice contact from the website staff.You get what you pay for, a boots while you have to do zero effort yourself. Only down option for me was: i wanted to learn and do more effort my self. </div>
+                    </div>
+                    <div class="rev_block__block">
+                        <div class="rev_block__title">N'Zoth, the Corruptor Heroic kill</div>
+                        <div class="rev_block__inf">
+                            <div class="rev_block__stars">
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                            </div>
+                            <div class="rev_block__name">Jimmy</div>
+                        </div>
+                        <div class="rev_block__text">Fast delivery! Nice contact from the website staff.You get what you pay for, a boots while you have to do zero effort yourself. Only down option for me was: i wanted to learn and do more effort my self. </div>
+                    </div>
+                    <div class="rev_block__block">
+                        <div class="rev_block__title">N'Zoth, the Corruptor Heroic kill</div>
+                        <div class="rev_block__inf">
+                            <div class="rev_block__stars">
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                            </div>
+                            <div class="rev_block__name">Jimmy</div>
+                        </div>
+                        <div class="rev_block__text">Fast delivery! Nice contact from the website staff.You get what you pay for, a boots while you have to do zero effort yourself. Only down option for me was: i wanted to learn and do more effort my self. </div>
+                    </div>
+                    <div class="rev_block__block">
+                        <div class="rev_block__title">N'Zoth, the Corruptor Heroic kill</div>
+                        <div class="rev_block__inf">
+                            <div class="rev_block__stars">
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                            </div>
+                            <div class="rev_block__name">Jimmy</div>
+                        </div>
+                        <div class="rev_block__text">Fast delivery! Nice contact from the website staff.You get what you pay for, a boots while you have to do zero effort yourself. Only down option for me was: i wanted to learn and do more effort my self. </div>
+                    </div>
+                    <div class="rev_block__block">
+                        <div class="rev_block__title">N'Zoth, the Corruptor Heroic kill</div>
+                        <div class="rev_block__inf">
+                            <div class="rev_block__stars">
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                                <div class="rev_block__star"></div>
+                            </div>
+                            <div class="rev_block__name">Jimmy</div>
+                        </div>
+                        <div class="rev_block__text">Fast delivery! Nice contact from the website staff.You get what you pay for, a boots while you have to do zero effort yourself. Only down option for me was: i wanted to learn and do more effort my self. </div>
+                    </div>
+                </div>
+            </div>
+            <div class="red_block center_block2">
+                <h2>What are Video Game Boosting Services?</h2>
+                <div>As stated above, boosting services is when an experienced player helps you get in-game valuables or complete various difficult tasks. There are many kinds of such services depending on the game you play, but usually you can buy the following types of carry services:</div>
+                <ul>
+                    <li>PVE carries: Completing dungeons and raids.</li>
+                    <li>PVP carries: Rating boost, PVP-challenges, PVP-tokens farming.</li>
+                    <li>Farming services: Reputations, tokens, mounts, etc.</li>
+                    <li>Currencies</li>
+                </ul>
+                <p>Every game boosting service is far more complex than you may think. First off, our concern is the safety of our customers' accounts, because developers are usually not happy with players using any kind of MMO boost. That is why over the years of our enterprise we have developed a set of strict safety rules, which has proven to be quite effective in protecting our clients' accounts.</p>
+                <p>Secondly, finding the right pro-player is a difficult task by itself. To ensure excellent quality of all our services, we have created a set of standards that all our players should match to take the job. Also, they are constantly monitored by their supervisors. Everything is done for our clients' convenience.</p>
+                <p>Another thing is Customer Service, which is also crucial for making a positive customer experience. Our managers are available 24/7 and can help you with any question that might arise when using our services. Feel free to ask them anything!</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Some text</th>
+                            <th>Some text</th>
+                            <th>Some text</th>
+                            <th>Some text</th>
+                            <th>Some text</th>
+                        </tr>
+                        <tr>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                        </tr>
+                        <tr>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                        </tr>
+                        <tr>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                        </tr>
+                        <tr>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                        </tr>
+                        <tr>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                            <td>Some text</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Why Use SkyGold Boosting Services?</h2>
+                <p>One of the main reasons why players use account boosting services is because they don’t have a lot of time to commit to playing the game. Life can be busy, and sometimes it’s hard to find enough hours in the day to play as much as we want and, consequently, get all in-game valuables that we want. That’s where SkyGold comes in – we can help you quickly so that you can actually enjoy the game.</p>
+                <p>Another reason to use our service is because we are one of the most reliable companies out there. We know how important it is for our customers to receive their boosts in a timely manner, and we always work hard to make sure that happens. We also offer a money-back guarantee if you’re not happy with our professional game boosting service.</p>
+                <p>So if you’re looking for a reliable, fast boosting service, be sure to check out SkyGold! We’ll help you get ahead in the game so that you can enjoy it even more.</p>
+            </div>
+        </main>
         <footer class="footer">
             <div class="footer__in center_block">
                 <div class="footer__top">
@@ -64,19 +340,20 @@
                                 <input type="submit" value="Subscribe">
                             </form>
                         </div>
-                        <div class="footer__pays">
-                            <div class="footer__pay"><img src="img/s1.svg" alt=""></div>
-                            <div class="footer__pay"><img src="img/s2.svg" alt=""></div>
-                            <div class="footer__pay"><img src="img/s3.svg" alt=""></div>
-                            <div class="footer__pay"><img src="img/s4.svg" alt=""></div>
-                            <div class="footer__pay"><img src="img/s5.svg" alt=""></div>
-                            <div class="footer__pay"><img src="img/s6.svg" alt=""></div>
-                            <div class="footer__pay"><img src="img/s7.svg" alt=""></div>
-                            <div class="footer__pay"><img src="img/s8.svg" alt=""></div>
-                            <div class="footer__pay"><img src="img/s9.svg" alt=""></div>
-                            <div class="footer__pay"><img src="img/s10.svg" alt=""></div>
-                        </div>
+                        <a href="#" class="footer__btn">Affiliate disclosure</a>
                     </div>
+                </div>
+                <div class="footer__pays">
+                    <div class="footer__pay"><img src="img/s1.svg" alt=""></div>
+                    <div class="footer__pay"><img src="img/s2.svg" alt=""></div>
+                    <div class="footer__pay"><img src="img/s3.svg" alt=""></div>
+                    <div class="footer__pay"><img src="img/s4.svg" alt=""></div>
+                    <div class="footer__pay"><img src="img/s5.svg" alt=""></div>
+                    <div class="footer__pay"><img src="img/s6.svg" alt=""></div>
+                    <div class="footer__pay"><img src="img/s7.svg" alt=""></div>
+                    <div class="footer__pay"><img src="img/s8.svg" alt=""></div>
+                    <div class="footer__pay"><img src="img/s9.svg" alt=""></div>
+                    <div class="footer__pay"><img src="img/s10.svg" alt=""></div>
                 </div>
                 <div class="footer__bottom">SkyGold is not endorsed or in any way affiliated with Blizzard Entertainment, Bungie or Respawn Entertainment, and does not reflect the views or opinions of the aforementioned entities or anyone officially involved in producing or managing franchises. All trademarks of the aforementioned entities in U.S.A and/or other countries. All submitted art content remains copyright of its original copyright holder. SkyGold is not selling ingame items, only offers different services to make players ingame skill better and gifting them ingame items.</div>
             </div>
