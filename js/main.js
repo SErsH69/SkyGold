@@ -1,4 +1,23 @@
 $(function() {
+    var tfix = $('.header'),
+        tfixOffset = tfix.offset(),
+        hederHeight = $('.header').outerHeight();
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > tfixOffset.top) {
+            if ($(window).scrollTop() > tfixOffset.top) {
+            $('.wrapper').css({
+                'paddingTop': hederHeight + 'px'
+            });
+            tfix.addClass('fixed');
+            };
+        } else {
+            tfix.removeClass('fixed');
+            $('.wrapper').css({
+                'paddingTop': 0
+            });
+        };
+    });
+
     $(window).resize(function(){
         if (window.matchMedia("(max-width: 1024px)").matches) {
             $('.footer__menu').appendTo('.footer__l-side');
@@ -52,7 +71,7 @@ $(function() {
     $(document).on('click', function(e){
         if( $(e.target).closest('.burger-btn').length || $(e.target).closest('.burger-body').length)
         return
-    
+
         $('.burger-wrap').removeClass('opened');
         $('html').removeClass('ovh');
         $('body').removeClass('ovh');
@@ -123,7 +142,6 @@ $(function() {
         }
     });
 
-
     var newSelection = "";
     $(".block_sell__btn").click(function(){
         $(".block_sell__blocks").fadeTo(0, 0.10);
@@ -142,14 +160,22 @@ $(function() {
         $('.block_sell__btn').toggleClass('isOpened');
     });
 
-    
-   setTimeout(function(){
-        var text = $('#count_js').html();
-        var arr = text.split('');
-        for ( var i = 0; i<arr.length; i++  ) {
-            arr[i] =  "<span><span>" + arr[i] +  "</span></span>";
-        }
-        $('#count_js').html(arr);
-   }, 100);
+    if ($("#count_js").length){
+        setTimeout(function(){
+                var text = $('#count_js').html();
+                var arr = text.split('');
+                for ( var i = 0; i<arr.length; i++  ) {
+                    arr[i] =  "<span><span>" + arr[i] +  "</span></span>";
+                }
+                $('#count_js').html(arr);
+        }, 100);
+    };
+
+    setTimeout(function(){
+        $('.block_fix').removeClass('hide');
+        $('.block_fix__close').on('click', function(){
+            $('.block_fix').addClass('hide');
+        })
+    }, 30000);
 });
 $(window).trigger('resize');
