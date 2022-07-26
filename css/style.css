@@ -2473,7 +2473,8 @@ textarea {
     display: inline-block;
     border: 2px solid #5F73FA;
     margin-top: 40px;
-    margin-left: auto; }
+    margin-left: auto;
+    transition: all .3s ease-out; }
     @media all and (max-width: 1023px) {
       .footer__btn {
         margin-right: auto;
@@ -2482,6 +2483,8 @@ textarea {
       .footer__btn {
         max-width: 100%;
         width: 100%; } }
+    .footer__btn:hover {
+      background: #5F73FA; }
   .footer__pays {
     display: flex;
     align-items: center;
