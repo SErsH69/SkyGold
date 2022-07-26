@@ -74,7 +74,45 @@ $(function() {
                 }
             }
         ]
-    })
+    });
+
+    $('.sl_com_js').slick({
+        infinite: true,
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    centerMode: true,
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 540,
+                settings: {
+                    centerMode: true,
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    $('.sl_hot_js').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1160,
+                settings: {
+                    variableWidth: true
+                }
+            }
+        ]
+    });
 
     $('.faq_block__block').on('click', function(){
         $(this).toggleClass('isActive');
@@ -83,6 +121,35 @@ $(function() {
         } else {
             $(this).find('.faq_block__txt').hide(400)
         }
-    })
+    });
+
+
+    var newSelection = "";
+    $(".block_sell__btn").click(function(){
+        $(".block_sell__blocks").fadeTo(0, 0.10);
+        $(".block_sell__btn").removeClass("isActive");
+        $('.block_sell__btn').removeClass('isOpened');
+        $('.block_sell__cls').removeClass('isActive');
+        $(this).addClass("isActive");
+        newSelection = $(this).attr("data-attr");
+        $(".block_sell__block").not("."+newSelection).slideUp(0);
+        $("."+newSelection).slideDown(0);
+        $(".block_sell__blocks").fadeTo(0, 1);
+    });
+
+    $('.block_sell__cls').on('click', function(){
+        $(this).toggleClass("isActive");
+        $('.block_sell__btn').toggleClass('isOpened');
+    });
+
+    
+   setTimeout(function(){
+        var text = $('#count_js').html();
+        var arr = text.split('');
+        for ( var i = 0; i<arr.length; i++  ) {
+            arr[i] =  "<span><span>" + arr[i] +  "</span></span>";
+        }
+        $('#count_js').html(arr);
+   }, 100);
 });
 $(window).trigger('resize');
