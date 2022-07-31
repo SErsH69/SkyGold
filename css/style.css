@@ -85,7 +85,8 @@ textarea {
   @media all and (max-width: 1023px) {
     .header {
       padding-top: 16px;
-      padding-bottom: 16px; } }
+      padding-bottom: 16px;
+      background: rgba(23, 30, 38, 0.85); } }
   .header__in {
     display: flex;
     align-items: center;
@@ -144,7 +145,10 @@ textarea {
       .header__button.btn_sign:hover {
         background: transparent; }
   .header__select {
-    margin-left: auto; }
+    margin-left: auto;
+    transition: all .3s ease-out; }
+    .header__select:hover {
+      background: #5F73FA; }
     @media all and (max-width: 1023px) {
       .header__select {
         display: none; } }
@@ -171,6 +175,9 @@ textarea {
   padding: 2px 40px 2px 8px;
   height: auto;
   line-height: normal; }
+  .select_price .nice-select .current {
+    display: flex;
+    align-items: center; }
   .select_price .nice-select .list {
     border-radius: 0;
     background: #000; }
@@ -891,7 +898,8 @@ textarea {
       .block_choose__img {
         margin-bottom: 0;
         margin-right: 16px;
-        flex: 0 0 64px; } }
+        flex: 0 0 64px;
+        margin-left: 0; } }
   .block_choose__tit {
     font-family: 'Anton', sans-serif;
     font-style: normal;
@@ -992,24 +1000,26 @@ textarea {
             margin-bottom: 16px;
             font-size: 20px;
             height: 40px; } }
-      .block_form__form form input[type="submit"] {
-        background: #5F73FA;
-        max-width: 160px;
-        width: 100%;
-        padding: 1.5px;
-        font-family: 'Anton', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        cursor: pointer;
-        font-size: 32px;
-        text-transform: uppercase;
-        color: #FFFFFF;
-        text-align: center; }
-        @media all and (max-width: 1023px) {
-          .block_form__form form input[type="submit"] {
-            max-width: 100%;
-            font-size: 20px;
-            height: 40px; } }
+    .block_form__form form button[type="submit"] {
+      border: 0;
+      background: #5F73FA;
+      max-width: 160px;
+      width: 100%;
+      border-radius: 0;
+      padding: 1.5px;
+      font-family: 'Anton', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      cursor: pointer;
+      font-size: 32px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-align: center; }
+      @media all and (max-width: 1023px) {
+        .block_form__form form button[type="submit"] {
+          max-width: 100%;
+          font-size: 20px;
+          height: 40px; } }
 
 .block_sell {
   padding-top: 48px;
@@ -1125,6 +1135,7 @@ textarea {
     margin-bottom: 32px;
     display: flex;
     align-items: center;
+    text-decoration: none;
     padding: 32px; }
     @media all and (max-width: 1180px) {
       .block_sell__block {
@@ -1137,7 +1148,8 @@ textarea {
           margin-bottom: 16px; } }
     @media all and (max-width: 640px) {
       .block_sell__block {
-        flex-direction: column; } }
+        flex-direction: column;
+        position: relative; } }
   .block_sell__l-side {
     max-width: 244px;
     margin-right: 20px;
@@ -1146,9 +1158,15 @@ textarea {
     @media all and (max-width: 640px) {
       .block_sell__l-side {
         flex: none;
-        max-width: 100%;
         margin-right: 0;
-        margin-bottom: 16px; } }
+        margin-bottom: 16px;
+        max-width: 160px;
+        max-height: 160px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 100%;
+        position: unset; } }
   .block_sell__r-side {
     width: 100%; }
   .block_sell__icon {
@@ -1158,7 +1176,9 @@ textarea {
     @media all and (max-width: 640px) {
       .block_sell__icon {
         width: 32px;
-        height: 32px; }
+        height: 32px;
+        top: 24px;
+        left: 24px; }
         .block_sell__icon svg {
           width: 100%;
           height: 100%; } }
@@ -1259,6 +1279,7 @@ textarea {
     padding-top: 130px; }
     @media all and (max-width: 1023px) {
       .frst_block.serv {
+        padding-bottom: 170px;
         background: url("../img/bg_pic2.png") 100% 100%/50% no-repeat, url("../img/bg4.jpg") 50%/cover no-repeat; } }
     @media all and (max-width: 640px) {
       .frst_block.serv {
@@ -1276,7 +1297,7 @@ textarea {
     .frst_block {
       padding-top: 97px !important;
       margin-top: -73px;
-      min-height: 100vh; } }
+      padding-bottom: 170px; } }
   .frst_block:before {
     bottom: 0;
     left: 0;
@@ -2217,8 +2238,10 @@ textarea {
   @media all and (max-width: 1023px) {
     .block_fix {
       padding: 16px;
-      top: calc(100% + 17px);
-      max-width: 100%; } }
+      max-width: 100%;
+      position: fixed;
+      top: unset;
+      bottom: 0; } }
   .block_fix.hide {
     opacity: 0;
     visibility: hidden;
@@ -2262,12 +2285,12 @@ textarea {
     cursor: pointer; }
 
 .mob_block {
-  padding: 24px;
+  padding: 23px;
   background: linear-gradient(180deg, rgba(78, 184, 13, 0.17) 0%, rgba(78, 184, 13, 0) 100%);
   border: 1px solid #4EB80D;
   border-radius: 24px;
   display: none; }
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 640px) {
     .mob_block {
       display: block; } }
   .mob_block__title {
@@ -2296,7 +2319,6 @@ textarea {
     margin-bottom: 16px; }
   .mob_block__link {
     text-decoration: none;
-    width: 100%;
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 500;
@@ -2304,13 +2326,14 @@ textarea {
     line-height: 15px;
     text-align: center;
     display: inline-block;
-    max-width: 400px;
     width: 100%;
     color: #FFFFFF;
     margin-bottom: 32px;
     background: #4EB80D;
     border-radius: 5px;
     padding: 12px; }
+  .mob_block__img img {
+    width: 100%; }
 
 .footer {
   background: rgba(95, 115, 250, 0.25);
@@ -2421,6 +2444,9 @@ textarea {
     @media all and (max-width: 1023px) {
       .footer__form {
         justify-content: center; } }
+    @media all and (max-width: 640px) {
+      .footer__form {
+        width: 100%; } }
     .footer__form form {
       font-size: 0; }
       @media all and (max-width: 1023px) {
@@ -2428,6 +2454,9 @@ textarea {
           display: flex;
           align-items: center;
           justify-content: center; } }
+      @media all and (max-width: 640px) {
+        .footer__form form {
+          width: 100%; } }
     .footer__form input[type="email"] {
       max-width: 216px;
       width: 100%;
@@ -2448,7 +2477,11 @@ textarea {
         font-size: 20px;
         text-transform: uppercase;
         color: #FFFFFF; }
-    .footer__form input[type="submit"] {
+      @media all and (max-width: 640px) {
+        .footer__form input[type="email"] {
+          max-width: 100%; } }
+    .footer__form button[type="submit"] {
+      border-radius: 0;
       font-family: 'Anton', sans-serif;
       font-style: normal;
       font-weight: 400;
@@ -2470,6 +2503,7 @@ textarea {
     text-transform: uppercase;
     color: #FFFFFF;
     text-decoration: none;
+    cursor: pointer;
     display: inline-block;
     border: 2px solid #5F73FA;
     margin-top: 40px;

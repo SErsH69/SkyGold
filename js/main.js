@@ -24,12 +24,14 @@ $(function() {
             $('.header__menu ul').appendTo('.burger_appended');
             $('.header__select .select_price').appendTo('.burger_appended');
             $('.header__buttons .header__body').appendTo('.burger_appended');
+            $('.header__in .block_fix').appendTo('.wrapper');
         }
         if (window.matchMedia("(min-width: 1024px)").matches) {
             $('.footer__menu').appendTo($('.footer__item'));
             $('.burger_appended > ul').appendTo($('.header__menu'));
             $('.burger_appended .select_price').appendTo($('.header__select'));
             $('.burger_appended .header__body').appendTo($('.header__buttons'));
+            $('.wrapper .block_fix').appendTo($('.header__in'));
         }
     });
     if (window.matchMedia("(max-width: 1024px)").matches) {
@@ -37,12 +39,14 @@ $(function() {
         $('.header__menu ul').appendTo('.burger_appended');
         $('.header__select .select_price').appendTo('.burger_appended');
         $('.header__buttons .header__body').appendTo('.burger_appended');
+        $('.header__in .block_fix').appendTo('.wrapper');
     }
     if (window.matchMedia("(min-width: 1024px)").matches) {
         $('.footer__menu').appendTo($('.footer__item'));
         $('.burger_appended > ul').appendTo($('.header__menu'));
         $('.burger_appended .select_price').appendTo($('.header__select'));
         $('.burger_appended .header__body').appendTo($('.header__buttons'));
+        $('.wrapper .block_fix').appendTo($('.header__in'));
     }
 
     $('.select_price select').niceSelect();
@@ -171,11 +175,15 @@ $(function() {
         }, 100);
     };
 
-    setTimeout(function(){
-        $('.block_fix').removeClass('hide');
-        $('.block_fix__close').on('click', function(){
+    $('.footer__btn').on('click', function(){
+        $('.block_fix').toggleClass('hide');
+        
+        $(document).on('click', function(e){
+            if( $(e.target).closest('.block_fix').length || $(e.target).closest('.footer__btn').length)
+            return
+
             $('.block_fix').addClass('hide');
-        })
-    }, 30000);
+        });
+    })
 });
 $(window).trigger('resize');
