@@ -1464,7 +1464,7 @@ textarea {
             background: url("../img/bg_pic.png") 100% 100% / 70% no-repeat, url("../img/bg3.jpg") 50%/cover no-repeat;
         }
         @media all and (max-width: 480px) {
-            background: url("../img/bg_pic.png") 50% calc(100% + 110px) / 130% no-repeat, url("../img/bg3.jpg") 50%/cover no-repeat;
+            background: url("../img/bg_pic.png") 50% calc(100% + 110px) / 400px no-repeat, url("../img/bg3.jpg") 50%/cover no-repeat;
         }
     }
     &.serv {

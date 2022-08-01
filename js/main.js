@@ -177,13 +177,12 @@ $(function() {
 
     $('.footer__btn').on('click', function(){
         $('.block_fix').toggleClass('hide');
-        
-        $(document).on('click', function(e){
-            if( $(e.target).closest('.block_fix').length || $(e.target).closest('.footer__btn').length)
-            return
-
-            $('.block_fix').addClass('hide');
-        });
     })
+    $('.block_fix__close').on('click', function(){
+        $('.block_fix').toggleClass('hide');
+    });
+    setTimeout(function(){
+        $('.block_fix').toggleClass('hide');
+    }, 30000);
 });
 $(window).trigger('resize');
