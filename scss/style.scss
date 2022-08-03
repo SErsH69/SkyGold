@@ -649,7 +649,39 @@ textarea {
         }
     }
     .slick-prev, .slick-next {
-        display: none !important;
+        width: 40px;
+        height: 40px;
+        transition: all .3s ease-out;
+        border: 2px solid #5F73FA;
+        &.slick-disabled {
+            opacity: .5;
+            pointer-events: none;
+        }
+        @media all and (max-width: 1420px) {
+            display: none !important;
+        }
+    }
+    .slick-prev {
+        left: -72px;
+        &:before {
+            display: none;
+        }
+        font-size: 0;
+        transform: unset;
+        top: 50%;
+        margin-top: -20px;
+        background: url("data:image/svg+xml,%3Csvg width='10' height='17' viewBox='0 0 10 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.699772 7.54074L7.97656 0.660924C8.44045 0.223701 9.19111 0.223701 9.65358 0.660924C10.1155 1.09841 10.1155 1.80836 9.65358 2.24532L3.21473 8.33321L9.65244 14.4195C10.1155 14.8572 10.1155 15.5667 9.65244 16.0039C9.18997 16.4427 8.43931 16.4427 7.97656 16.0039L0.699772 9.12433C0.468538 8.90545 0.353204 8.6196 0.353204 8.33321C0.353204 8.04655 0.468538 7.75828 0.699772 7.54074Z' fill='white'/%3E%3C/svg%3E%0A") 50% no-repeat;
+    }
+    .slick-next {
+        right: -72px;
+        &:before {
+            display: none;
+        }
+        font-size: 0;
+        transform: unset;
+        top: 50%;
+        margin-top: -20px;
+        background: url("data:image/svg+xml,%3Csvg width='10' height='17' viewBox='0 0 10 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.47674 7.36399L2.19995 0.484166C1.73607 0.0469437 0.985408 0.0469437 0.52294 0.484166C0.0610383 0.921656 0.0610383 1.63161 0.52294 2.06856L6.96179 8.15645L0.524073 14.2427C0.0610385 14.6805 0.0610385 15.3899 0.524073 15.8271C0.986542 16.266 1.7372 16.266 2.19995 15.8271L9.47674 8.94758C9.70798 8.7287 9.82331 8.44284 9.82331 8.15645C9.82331 7.86979 9.70798 7.58152 9.47674 7.36399Z' fill='white'/%3E%3C/svg%3E%0A") 50% no-repeat;
     }
 }
 // rev_block end
@@ -1077,6 +1109,7 @@ textarea {
 
 // block_form
 .block_form {
+    background: url('../img/bg_fr.jpg') 50% / cover no-repeat;
     padding-top: 88px;
     padding-bottom: 88px;
     @media all and (max-width: 1023px) {

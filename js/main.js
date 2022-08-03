@@ -176,11 +176,12 @@ $(function() {
     };
 
     $('.footer__btn').on('click', function(){
-        $('.block_fix').toggleClass('hide');
+        $('.block_fix').removeClass('hide');
     })
     $('.block_fix__close').on('click', function(){
         $('.block_fix').toggleClass('hide');
     });
+    $('.block_fix').removeClass('hide');
     setTimeout(function(){
         $('.block_fix').toggleClass('hide');
     }, 30000);
